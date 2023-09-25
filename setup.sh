@@ -94,8 +94,8 @@ updateSystem() {
 }
 
 updateSystem
+checkInstallReq
 installDependencies
-checkEnv
 installStarship
 if linkConfig; then
     echo -e "${GREEN}Done!\nrestart your shell to see the changes.${RC}"
