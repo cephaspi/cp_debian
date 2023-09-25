@@ -1,2 +1,3 @@
 # cp_debian
-CephasPi Debian installation and post install steps.
+To run initial system setup after first boot run<br>
+setup.sh
