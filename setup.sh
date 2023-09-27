@@ -3,7 +3,7 @@
 ##################################################
 ## Inspired by ChrisTitusTech scripts.
 ##################################################
-INSTALL_DEPENDENCIES='sudo coreutils curl git wget tar autojump bash bash-completion neovim neofetch btop vlc libavcodec-extra net-tools flatpak gmome-software-plugin-flatpak'
+INSTALL_DEPENDENCIES='sudo coreutils curl git wget tar autojump bash bash-completion neovim neofetch net-tools flatpak'
 
 RC='\e[0m'
 RED='\e[31m'
@@ -55,11 +55,11 @@ installDependencies() {
     ## Check for dependencies.
     echo -e "${YELLOW}Installing dependencies...${RC}"
     sudo ${PACKAGER} install -yq ${INSTALL_DEPENDENCIES}
-    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 }
 
 installStarship(){
-    STARSHIP_CMD==$(which starship)
+  pausescript
+    STARSHIP_CMD=$(which starship)
     if [[ ! -z $STARSHIP_CMD ]]; then
         echo "Starship already installed"
         return
@@ -89,11 +89,19 @@ linkConfig() {
 }
 
 updateSystem() {
-  # update system
-  sudo apt update && suso apt upgrade -y
+  sudo apt update
+}
+
+updgradeSystem() {
+  sudo apt upgrade -y
+}
+
+pausescript() {
+  read -n 1 -s -r -p "Press any key to continue"
 }
 
 updateSystem
+upgradeSystem
 checkInstallReq
 installDependencies
 installStarship
