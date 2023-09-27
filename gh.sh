@@ -1,5 +1,5 @@
 #!/bin/bash
-read -n 1 -s -r -p "Press any key to continue from gh.sh"
+
 # if curl is not installed then install curl 
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 # install gh
