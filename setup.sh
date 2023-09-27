@@ -104,6 +104,7 @@ upgradeSystem
 checkInstallReq
 installDependencies
 installStarship
+/bin/bash gh.sh
 if linkConfig; then
     echo -e "${GREEN}Done!\nrestart your shell to see the changes.${RC}"
 else
