@@ -58,7 +58,6 @@ installDependencies() {
 }
 
 installStarship(){
-  pausescript
     STARSHIP_CMD=$(which starship)
     if [[ ! -z $STARSHIP_CMD ]]; then
         echo "Starship already installed"
