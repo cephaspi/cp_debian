@@ -85,6 +85,7 @@ linkConfig() {
     ## Make symbolic link.
     ln -svf ${GITPATH}/.bashrc ${HOME}/.bashrc
     ln -svf ${GITPATH}/starship.toml ${HOME}/.config/starship.toml
+    ln -svf ${GITPATH}/init.vim ${HOME}/.config/nvim/init.vim
 }
 
 updateSystem() {
@@ -105,6 +106,7 @@ checkInstallReq
 installDependencies
 installStarship
 /bin/bash gh.sh
+mkdir -p ~/.config/nvim
 if linkConfig; then
     echo -e "${GREEN}Done!\nrestart your shell to see the changes.${RC}"
 else
