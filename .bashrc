@@ -1,6 +1,11 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
+RC='\e[0m'
+RED='\e[31m'
+YELLOW='\e[33m'
+GREEN='\e[32m'
+
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 #######################################################
@@ -185,6 +190,25 @@ alias clickpaste='sleep 3; xdotool type "$(xclip -o -selection clipboard)"'
 #######################################################
 # SPECIAL FUNCTIONS
 #######################################################
+
+# List all ls aliases
+lsls ()
+{
+  echo -e "la=${GREEN}'ls -Alh' #${RED} show hidden files${RC}"
+  echo -e "ls=${GREEN}'ls -aFh --color=always' # add colors and file type extensions${RC}"
+  echo -e "lx=${GREEN}'ls -lXBh' # ${RED}sort by extension${RC}"
+  echo -e "lk=${GREEN}'ls -lSrh' # ${RED}sort by size${RC}"
+  echo -e "lc=${GREEN}'ls -lcrh' # ${RED}sort by change time${RC}"
+  echo -e "lu=${GREEN}'ls -lurh' # ${RED}sort by access time${RC}"
+  echo -e "lr=${GREEN}'ls -lRh' # ${RED}recursive ls${RC}"
+  echo -e "lt=${GREEN}'ls -ltrh' # ${RED}sort by date${RC}"
+  echo -e "lm=${GREEN}'ls -alh |more' # pipe through 'more'${RC}"
+  echo -e "lw=${GREEN}'ls -xAh' # wide listing format${RC}"
+  echo -e "ll=${GREEN}'ls -Fls' # long listing format${RC}"
+  echo -e "labc=${GREEN}'ls -lap' ${RED}#alphabetical sort${RC}"
+  echo -e "lf=${GREEN}'ls -l | egrep -v '^d'' # ${RED}files only${RC}"
+  echo -e "ldir=${GREEN}'ls -l | egrep '^d'' # ${RED}directories only${RC}"
+}
 
 # Use the best version of pico installed
 edit ()
