@@ -85,6 +85,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias sudo='sudo '
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -iv'
