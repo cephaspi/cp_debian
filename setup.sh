@@ -3,7 +3,7 @@
 ##################################################
 ## Inspired by ChrisTitusTech scripts.
 ##################################################
-INSTALL_DEPENDENCIES='sudo coreutils curl git wget tar autojump bash bash-completion neovim neofetch net-tools flatpak unzip'
+INSTALL_DEPENDENCIES='sudo coreutils curl git wget tar autojump bash bash-completion neovim neofetch net-tools unzip'
 SUGROUP='sudo'
 PACKAGER='apt'
 
